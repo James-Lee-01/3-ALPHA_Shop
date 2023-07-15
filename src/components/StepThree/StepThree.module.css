@@ -1,0 +1,50 @@
+form {
+  width: 540px;
+  height: 350px;
+  border-bottom: 1px solid gray;
+}
+
+.formTitle {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.formBody {
+  margin-top: 24px;
+}
+
+.inputLine1 input{
+  width: 350px;
+}
+
+.inputLine2 input {
+  width: 350px;
+}
+
+.inputLine3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.inputLine3 input {
+  width: 250px;
+}
+
+.inputLabel {
+  color: #808080;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.inputStyle {
+  height: 40px;
+  padding: 0 18px;
+  margin-bottom: 24px;
+  border-radius: 4px;
+  border: 1px solid #4A4A4A;
+  box-sizing: border-box;
+}
