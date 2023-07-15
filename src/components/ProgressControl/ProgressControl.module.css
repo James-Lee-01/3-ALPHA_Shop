@@ -1,0 +1,45 @@
+.progressControlContainer {
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.buttonGroup1 {
+  justify-content: end;
+}
+
+.next, .prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 174px;
+  height: 46px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 500;
+  
+}
+
+.next {
+  background-color: #f67599;
+  color: white;
+}
+
+.prev {
+  background: none;
+}
+
+.arrowLeft {
+  fill: black;
+  margin-right: 12px;
+}
+
+.arrowRight {
+  margin-left: 12px;
+}
