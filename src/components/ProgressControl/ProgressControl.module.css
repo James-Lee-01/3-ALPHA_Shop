@@ -7,7 +7,9 @@
 .buttonGroup {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #E6E6EB;
 }
 
 .buttonGroup1 {
