@@ -2,11 +2,10 @@
 
 透過 [Create React App](https://github.com/facebook/create-react-app) 建立的Alpha Shop。
 
-目前進行到階段一：初步簡易畫面渲染。
+目前進行到階段二：初步主畫面渲染。
 
 ## 專案畫面
-![image](images/screenshot-step-1.png)
-![image](images/screenshot-step-btn.png)
+![image](images/screenshot-main.png)
 
 ## 產品功能
 - 畫面
@@ -17,6 +16,9 @@
   - ProgressControl：「上一步」、「下一步」和「確認下單」的按鈕。
 
 - 僅渲染 Step1 的表單及 ProgressControl 的多個按鈕，尚未執行分頁功能。
+- 07/21 更新：
+  - 新增右側購物籃元件。
+  - 畫面暫時隱藏Step2 & 3及其按鈕。 
 
 ## 環境建置
 1. 請先確認有安裝 node.js 與 npm。
