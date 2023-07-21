@@ -12,7 +12,7 @@ function ProgressControl() {
         </button>
       </section>
 
-      <section class={styles.buttonGroup } data-phase="shipping">
+      <section class={`${styles.buttonGroup} ${styles.buttonGroup2}`} data-phase="shipping">
         <button class={styles.prev}>
           <LeftArrow className={styles.arrowLeft}/>
           上一步
@@ -24,7 +24,7 @@ function ProgressControl() {
         </button>
       </section>
 
-      <section class={styles.buttonGroup } data-phase="credit-card">
+      <section class={`${styles.buttonGroup} ${styles.buttonGroup3}`} data-phase="credit-card">
         <button class={styles.prev}>
           <LeftArrow className={styles.arrowLeft}/>
           上一步
