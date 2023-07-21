@@ -1,9 +1,8 @@
 import "./App.css";
 import StepProgress from "./components/StepProgress/StepProgress.jsx";
 import ProgressControl from "./components/ProgressControl/ProgressControl.jsx";
-import StepOne from "./components/StepOne/StepOne.jsx";
-import StepTwo from "./components/StepTwo/StepTwo.jsx";
-import StepThree from "./components/StepThree/StepThree.jsx";
+import StepOne from "./components/Steps/StepOne/StepOne.jsx";
+import Cart from "./components/Cart/Cart.jsx";
 
 function App() {
   return (
@@ -12,12 +11,13 @@ function App() {
           <StepProgress />
         <div className="formContainer">
             <StepOne />
-            <StepTwo />
-            <StepThree />
         </div>
         <div className="controlContainer">
           <ProgressControl />
         </div>
+      </div>
+      <div className="cartSideContainer">
+      <Cart />
       </div>
     </main>
   );
