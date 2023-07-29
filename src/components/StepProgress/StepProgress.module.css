@@ -1,6 +1,7 @@
 .registerTitle {
   font-size: 32px;
   font-weight: 700;
+  line-height: 38px;
 }
 
 .progressContainer {
@@ -39,15 +40,16 @@
   color: #999;
 }
 
-.checkIcon {
-  width: 24px;
-  height: 24px;
-}
-
 .progressBar {
   height: 1.5px;
   width: 60px;
   background-color: #999;
+}
+
+.progressBarDone {
+  height: 1.5px;
+  width: 60px;
+  background-color: #333;
 }
 
 
