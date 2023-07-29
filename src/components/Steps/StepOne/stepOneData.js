@@ -4,7 +4,6 @@ const stepOneData = {
     { value: "ms", type: "女士" },
     { value: "mx", type: "不明" }
   ],
-
   
   city: [
     { value: "", name: "請選擇縣市" },
