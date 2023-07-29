@@ -2,10 +2,10 @@
 
 透過 [Create React App](https://github.com/facebook/create-react-app) 建立的Alpha Shop。
 
-目前進行到階段二：初步主畫面渲染。
+目前進行到階段三：主畫面換頁邏輯及商品數量、金額調整。
 
 ## 專案畫面
-![image](images/screenshot-main.png)
+![image](images/screenshot-step-2.png)
 
 ## 產品功能
 - 畫面
@@ -19,6 +19,14 @@
 - 07/21 更新：
   - 新增右側購物籃元件。
   - 畫面暫時隱藏Step2 & 3及其按鈕。 
+
+- 07/29 更新：
+  - 加入頁面切換功能。
+  - 加入商品數量調整功能(數量為零時自動移出購物籃)。
+  - 購物籃無物品時，小計金額會是零。
+  - 加入金額總結功能。
+  - 加入運費計算功能。
+  - 調整換頁時進度條變化。
 
 ## 環境建置
 1. 請先確認有安裝 node.js 與 npm。
