@@ -1,42 +1,37 @@
 import styles from "./StepProgress.module.css";
-// import { ReactComponent as CheckIcon } from "../../icons/pg-complete.svg";
+import { ReactComponent as CheckIcon } from "../../icons/pg-complete.svg";
 
-function StepProgress() {
+function Step({currentStep, step, stepLabel}) {
   return (
-    <div>   
-      <h2 class={styles.registerTitle}>結帳</h2>
-
-      <section class={styles.progressContainer}>
-
-        <span class={styles.currentGroup} data-phase="address">
-          <span class={styles.progressIcon}>
-            <span class={styles.text}>1</span>
-            {/* <CheckIcon className={styles.checkIcon}/> */}
-          </span>
-          <span class={styles.progressLabel}>寄送地址</span>
-        </span>
-
-        <span class={styles.progressBar} data-order="1"></span>
-
-        <span class={styles.progressGroup} data-phase="shipping">
-          <span class={styles.progressIcon}>
-            <span class={styles.text}>2</span>
-          </span>
-          <span class={styles.progressLabel}>運送方式</span>
-        </span>
-
-        <span class={styles.progressBar} data-order="2"></span>
-
-        <span class={styles.progressGroup} data-phase="credit-card">
-          <span class={styles.progressIcon}>
-            <span class={styles.text}>3</span>
-          </span>
-          <span class={styles.progressLabel}>付款資訊</span>
-        </span>
-
-      </section>
-    </div>       
+    <span className={currentStep >= step ? styles.currentGroup : styles.progressGroup}>
+      <span className={styles.progressIcon}>
+        <span className={styles.text}> {currentStep > step ? <CheckIcon/> : step} </span>
+      </span>
+      <span className={styles.progressLabel}>{stepLabel}</span>
+    </span>
   )
+}
+
+function ProgressBar({currentStep, step}) {
+  return (
+    <span className={currentStep > step ? styles.progressBarDone : styles.progressBar}>
+    </span>
+  );
+}
+
+function StepProgress({currentStep}) {
+  return (
+    <div>
+      <h2 className={styles.registerTitle}>結帳</h2>
+      <section className={styles.progressContainer}>
+        <Step currentStep={currentStep} step={1} stepLabel={"寄送地址"}/>
+        <ProgressBar currentStep={currentStep} step={1} />
+        <Step currentStep={currentStep} step={2} stepLabel={"運送方式"}/>
+        <ProgressBar currentStep={currentStep} step={2} />
+        <Step currentStep={currentStep} step={3} stepLabel={"付款資訊"}/>
+      </section>
+    </div>
+  );
 }
 
 export default StepProgress;
