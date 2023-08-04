@@ -1,19 +1,39 @@
 import styles from "./StepTwo.module.css";
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
+import { CartContext } from "../../../context/CartContext.js";
 
-function StepTwo({setShippingPrice}) {
-  const [shipping, setShipping] = useState('standard')
-  const handleSelectedShipping = e => setShipping(e.target.id)
+function StepTwo() {
+  const { 
+    addShippingPrice, 
+    lastSelectedShipping, 
+    updateShippingPrice 
+  } = useContext(CartContext);
 
-  function handleRadioChange(price) {
-    setShippingPrice(price)
+  const [shipping, setShipping] = useState(lastSelectedShipping);
+
+  useEffect(() => {
+    setShipping(lastSelectedShipping);
+  }, [lastSelectedShipping]);
+
+  const handleSelectedShipping = (e) => {
+    const selectedShipping = e.target.id;
+    setShipping(selectedShipping);
+    if (selectedShipping === "standard") {
+      addShippingPrice(0);
+    } else if (selectedShipping === "DHL") {
+      addShippingPrice(500);
+    }
+    updateShippingPrice(selectedShipping);
   }
 
   return (
     <form data-phase="shipping">
       <h3 className={styles.formTitle}>運送方式</h3>
       <section className={styles.formBody}>
-        <label className={styles.radioGroup} onClick={() => handleRadioChange(0)}>
+        <label
+          className={styles.radioGroup}
+          onClick={() => addShippingPrice(0)}
+        >
           <input
             className={styles.input}
             id="standard"
@@ -31,7 +51,10 @@ function StepTwo({setShippingPrice}) {
           </div>
           <div className={styles.radioBoxBorder}>免費</div>
         </label>
-        <label className={styles.radioGroup} onClick={() => handleRadioChange(500)}>
+        <label
+          className={styles.radioGroup}
+          onClick={() => addShippingPrice(500)}
+        >
           <input
             className={styles.input}
             id="DHL"
