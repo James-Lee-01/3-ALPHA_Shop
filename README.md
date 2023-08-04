@@ -2,10 +2,11 @@
 
 透過 [Create React App](https://github.com/facebook/create-react-app) 建立的Alpha Shop。
 
-目前進行到階段三：主畫面換頁邏輯及商品數量、金額調整。
+目前進行到階段四：主畫面換頁邏輯及商品數量、金額調整，能和表單互動，成功抓取使用者輸入的資料。
 
 ## 專案畫面
 ![image](images/screenshot-step-2.png)
+![image](images/screenshot-devtool.png)
 
 ## 產品功能
 - 畫面
@@ -27,6 +28,12 @@
   - 加入金額總結功能。
   - 加入運費計算功能。
   - 調整換頁時進度條變化。
+
+- 08/04 更新：
+  - 調整所有useState，加入useContext使用。
+  - 調整元件編排。
+  - 於Step 2加入useEffect使用，避免上下步驟返回時重新渲染使運費選項消失。
+  - 最後一步按下確認下單會於console裡面顯示總金額及Step 3的卡片資訊。
 
 ## 環境建置
 1. 請先確認有安裝 node.js 與 npm。
