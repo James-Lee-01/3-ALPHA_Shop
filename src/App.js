@@ -1,5 +1,7 @@
 import "./App.css";
 import { useState } from "react";
+import { FormContextProvider } from "./context/FormContext.js";
+import { CartContextProvider } from "./context/CartContext.js";
 import StepProgress from "./components/StepProgress/StepProgress.jsx";
 import ProgressControl from "./components/ProgressControl/ProgressControl.jsx";
 import StepOne from "./components/Steps/StepOne/StepOne.jsx";
@@ -9,7 +11,6 @@ import Cart from "./components/Cart/Cart.jsx";
 
 function App() {
   const [currentStep, setCurrentStep] = useState(1)
-  const [shippingPrice, setShippingPrice] = useState(0)
 
   function handleClickPrev() {
     if (currentStep > 1) {
@@ -18,21 +19,22 @@ function App() {
   }
 
   function handleClickNext() {
-    if (currentStep < 3) {
+    if (currentStep < 3) 
       setCurrentStep(currentStep + 1)
-    }
   }
 
   return (
     <main className="mainContainer">
+      <CartContextProvider>
       <div className="stepContainer">
           <StepProgress 
             currentStep={currentStep}
           />
+      <FormContextProvider>
         <div className="formContainer">
             {currentStep === 1 && <StepOne />}
-            {currentStep === 2 && <StepTwo setShippingPrice={setShippingPrice}/>}
-            {currentStep === 3 && <StepThree />}
+            {currentStep === 2 && <StepTwo/>}
+            {currentStep === 3 && <StepThree/>}
         </div>
         <div className="controlContainer">
           <ProgressControl
@@ -41,10 +43,12 @@ function App() {
             handleClickNext={handleClickNext}
           />
         </div>
+      </FormContextProvider>
       </div>
       <div className="cartSideContainer">
-      <Cart shippingPrice={shippingPrice}/>
+      <Cart/>
       </div>
+      </CartContextProvider>
     </main>
   );
 }
