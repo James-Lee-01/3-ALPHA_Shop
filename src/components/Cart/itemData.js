@@ -1,4 +1,4 @@
-export const itemData = [
+const itemData = [
   {
     id: '1',
     name: '貓咪罐罐',
@@ -14,3 +14,5 @@ export const itemData = [
     quantity: 1,
   },
 ]
+
+export default itemData
