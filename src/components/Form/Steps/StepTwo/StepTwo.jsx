@@ -1,6 +1,6 @@
 import styles from "./StepTwo.module.css";
 import { useState, useContext, useEffect } from "react";
-import { CartContext } from "../../../context/CartContext.js";
+import { CartContext } from "../../../../context/CartContext";
 
 function StepTwo() {
   const { 

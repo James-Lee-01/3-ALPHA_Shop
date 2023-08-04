@@ -1,5 +1,5 @@
 import styles from "./StepProgress.module.css";
-import { ReactComponent as CheckIcon } from "../../icons/pg-complete.svg";
+import { ReactComponent as CheckIcon } from "../../../icons/pg-complete.svg";
 
 function Step({currentStep, step, stepLabel}) {
   return (

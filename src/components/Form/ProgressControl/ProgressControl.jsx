@@ -1,9 +1,9 @@
 import styles from "./ProgressControl.module.css";
 import { useContext } from "react";
-import { FormContext } from "../../context/FormContext";
-import { CartContext } from "../../context/CartContext";
-import { ReactComponent as LeftArrow } from "../../icons/left-arrow.svg";
-import { ReactComponent as RightArrow } from "../../icons/right-arrow.svg";
+import { FormContext } from "../../../context/FormContext";
+import { CartContext } from "../../../context/CartContext";
+import { ReactComponent as LeftArrow } from "../../../icons/left-arrow.svg";
+import { ReactComponent as RightArrow } from "../../../icons/right-arrow.svg";
 
 function ProgressControl({currentStep, handleClickPrev, handleClickNext}) {
   const {formInfo} = useContext(FormContext)

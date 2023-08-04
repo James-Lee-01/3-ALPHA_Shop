@@ -1,6 +1,6 @@
 import styles from "./StepThree.module.css";
 import { useContext } from "react";
-import { FormContext } from "../../../context/FormContext";
+import { FormContext } from "../../../../context/FormContext.js";
 
 function StepThree() {
   const {handleInputChange} = useContext(FormContext)
